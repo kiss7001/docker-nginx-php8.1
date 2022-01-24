@@ -17,3 +17,6 @@ docker exec -it v002_wykim-ares_com /bin/bash
 
 사용될 기능
 sed -i 's/변경전 내용/변경할 내용/g' 파일명.sh
+
+
+service php8.1-fpm start

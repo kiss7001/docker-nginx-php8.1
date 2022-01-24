@@ -16,7 +16,9 @@ RUN chown -R www-data:www-data /var/lib/nginx
 WORKDIR /etc/nginx
 
 # Define default command.
-CMD ["nginx"]
+#CMD ["nginx"]
+# nginx를 백그라운드에서 돌아가도록 실행
+CMD ["nginx", "-g", "daemon off;"]
 
 # Expose ports.
 EXPOSE 80
