@@ -16,9 +16,7 @@ RUN chown -R www-data:www-data /var/lib/nginx
 WORKDIR /etc/nginx
 
 # Define default command.
-CMD ["nginx"]
+ENTRYPOINT ["nginx"]
 
 # Expose ports.
 EXPOSE 80
-
-RUN service php8.1-fpm start
