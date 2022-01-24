@@ -10,7 +10,7 @@ RUN apt-get install -y vim nginx php8.1-fpm php8.1-dom php8.1-mbstring python3-p
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 RUN chown -R www-data:www-data /var/lib/nginx
 
-RUN service php8.1-fpm start
+
 
 # Define working directory.
 WORKDIR /etc/nginx
@@ -20,3 +20,5 @@ CMD ["nginx"]
 
 # Expose ports.
 EXPOSE 80
+
+RUN service php8.1-fpm start
