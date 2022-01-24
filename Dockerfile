@@ -16,7 +16,7 @@ RUN chown -R www-data:www-data /var/lib/nginx
 WORKDIR /etc/nginx
 
 # Define default command.
-ENTRYPOINT ["nginx"]
+CMD ["nginx"]
 
 # Expose ports.
 EXPOSE 80
