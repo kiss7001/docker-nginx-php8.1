@@ -7,7 +7,7 @@ RUN apt install software-properties-common -y
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y vim nginx php8.1-fpm php8.1-dom php8.1-mbstring python3-pip
-RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+# RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 RUN chown -R www-data:www-data /var/lib/nginx
 
 
